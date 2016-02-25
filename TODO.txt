@@ -1,0 +1,33 @@
+--- DESIGN CHANGES ---
+
+1. In currency, remove decimal, replace with comma. [Done]
+2. Lesser spacing in rows. [Done]
+3. More compact table. [Done]
+4. Same sized columns so entire page looks neatly sorted. [29/12/15]
+5. New formatting for tables (according to screenshot : https://www.upwork.com/api/v3/wp-files/direct/room_0e1ec270bb2f80b29fd34cba1845647c/0a69a514-9d83-41e9-8cd9-8dbeff8b1578/Pasted+File+at+December+23%2C+2015+2%3A19+PM.png)
+6. Yellow indicator for signaling upcoming end of campaign. [Added instructions to css so Ronak can now choose any color he wants]
+7. Change on/off buttons (Jochen mentioned they are getting confused by them) [removed fancy buttons, added simple ones]
+8. Login page errors, make centered. Custom error classes for Ronak.
+9. Large screen - fixed position for navbar to avoid scroll away.
+10. Changed colors from light orange to light blue.
+
+
+
+--- DESIGN CHANGES 7-1-16 ---
+
+1. Display the yesterday's data also with an arrow indication of up and down.
+	5 types of arrows in two colors RED and GREEN
+	1. Arrow pointing up
+	2. Arrow pointing down
+	3. Arrow ponting right
+	4. Arrow pointing right + up (diagonally upwards)
+	5. Arrow pointing right + down (diagonally downwards)
+	Up arrow : Green, Down Arrow = Red
+	Arrow pointing right to use if the value is equal to yesterday.
+	Arrow straight up if the data is 50% better than yesterday. If its >50% down than straight down.
+		Conversions: more is better
+		CPA: less is better
+		CTR: more is better
+		Clicks: more is better
+		Impressions: more is better
+	https://www.upwork.com/api/v3/wp-files/direct/room_0e1ec270bb2f80b29fd34cba1845647c/83722b7e-3ed9-475a-b8d9-cf7d627f7d28/Pasted+File+at+January+4%2C+2016+10%3A56+AM.png

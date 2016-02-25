@@ -1,0 +1,685 @@
+body, html {
+    height: 100%;
+}
+
+/*************************************************/
+/*Login Page Styles*/
+.jumbotron {
+	text-align: center;
+	width: 40rem;
+	height: 44rem;
+	border-radius: 0.5rem;
+	top: 5rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: 4rem auto;
+	background-color: #ffffff;
+	padding: 2rem;
+	border: 1px solid #000;
+}
+
+.container .glyphicon-list-alt {
+	font-size: 10rem;
+	margin-top: 3rem;
+	/*color: #f96145;*/
+	color: #0074D9;
+}
+
+.jumbotron input {
+	width: 100%;
+	margin-bottom: 1.4rem;
+	padding: 1rem;
+	background-color: #ecf2f4;
+	border-radius: 0.2rem;
+	border: none;
+}
+.jumbotron h2  {
+	/*margin-bottom: 3rem;*/
+	margin-bottom: 0px;
+	font-weight: bold;
+	color: #585858;
+}
+.jumbotron h3 {
+	margin-top: 0px;
+	color: #585858;
+}
+
+.btn {
+	border-radius: 0.2rem;
+}
+.btn .glyphicon {
+	font-size: 3rem;
+	color: #fff;
+}
+.full-width {
+	background-color: #585858;
+	width: 100%;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.btn.btn-signin:hover{
+    background-color: rgb(249, 97, 69);
+}
+
+.box {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 3rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+/*End Login Page styles*/
+/*************************************************/
+
+
+/*Took sidebar base styles from http://bootsnipp.com/snippets/featured/responsive-sidebar-menu*/
+/*************************************************/
+/*Main dashboard navbar styles*/
+
+/*Over-riding default bootstrap colors*/
+
+.navbar .container-fluid{
+	background-color: #fff;
+}
+
+nav.navbar-inverse{
+	background-image: None;
+	background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	/*color: #f96145;;*/
+	color: #0074D9;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #000;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+/* remove outer padding */
+.main .row{
+	padding: 0px;
+	margin: 0px;
+}
+
+/*Remove rounded coners*/
+
+nav.sidebar.navbar {
+	border-radius: 0px;
+}
+
+nav.sidebar, .main{
+	-webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+/* Add gap to nav and right windows.*/
+.main{
+	padding: 10px 10px 0 10px;
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+@media (min-width:0px) and (max-width:511px) and (orientation: portrait) {
+    .navbar{
+        margin-bottom:0px;
+    }
+    .navbar-header .glyphicon-circle-arrow-right{
+        display:none
+        }
+    #dashboard_table .date_time{
+        /*float:left;
+        margin-top:-20px;
+        margin-left:15px*/
+        text-align: right;
+    }
+    .date_range_picker{
+        /*margin-bottom:25px;*/
+    }
+}
+
+@media (min-width:0px) and (max-width:640px) and (orientation: landscape) {
+    .navbar{
+        margin-bottom:0px;
+    }
+    .navbar-header .glyphicon-circle-arrow-right{
+        display:none
+        }
+    #dashboard_table .date_time{
+        /*float:left;
+        margin-top:-20px;
+        margin-left:15px*/
+        text-align: right;
+    }
+    .date_range_picker{
+        /*margin-bottom:25px;*/
+    }
+}
+
+/*small/medium side display*/
+@media (min-width: 768px) {
+
+	.navbar-header .glyphicon-circle-arrow-right{
+		display: block;
+	}
+
+	/*Allow main to be next to Nav*/
+	.main{
+		position: absolute;
+		width: calc(100% - 40px); /*keeps 100% minus nav size*/
+		margin-left: 40px;
+		float: right;
+	}
+
+	/*lets nav bar to be showed on mouseover*/
+	/*Now handles by javascript*/
+	/*nav.sidebar:hover + .main, nav.sidebar:focus + .main{
+		margin-left: 200px;
+	}*/
+
+	/*Center Brand*/
+	nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+		margin-left: 0px;
+	}
+	/*Center Brand*/
+	nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+		text-align: center;
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	/*Center Icons*/
+	nav.sidebar a{
+		padding-right: 13px;
+	}
+
+	/*adds border top to first nav box */
+	nav.sidebar .navbar-nav > li:first-child{
+		border-top: 1px #e5e5e5 solid;
+	}
+
+	/*adds border to bottom nav boxes*/
+	nav.sidebar .navbar-nav > li{
+		border-bottom: 1px #e5e5e5 solid;
+	}
+
+	/* Colors/style dropdown box*/
+	nav.sidebar .navbar-nav .open .dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		margin-top: 0;
+		background-color: transparent;
+		border: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	/*allows nav box to use 100% width*/
+	nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+		padding: 0 0px 0 0px;
+	}
+
+	/*colors dropdown box text */
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+		color: #777;
+	}
+
+	/*gives sidebar width/height*/
+	nav.sidebar{
+		width: 200px;
+		height: 100%;
+		margin-left: -160px;
+		float: left;
+		z-index: 8000;
+		margin-bottom: 0px;
+	}
+
+	/*give sidebar 100% width;*/
+	nav.sidebar li {
+		width: 100%;
+	}
+
+	/* Move nav to full on mouse over*/
+	/*Now handles by javascript*/
+	/*nav.sidebar:hover{
+		margin-left: 0px;
+	}*/
+	/*for hiden things when navbar hidden*/
+	.forAnimate{
+		opacity: 0;
+	}
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+/*commented everything inside so that min-width: medium size style can be applied here too (takes care of the sliding effect)*/
+@media (min-width: 1330px) {
+
+	/*Allow main to be next to Nav*/
+	/*.main{
+		width: calc(100% - 200px);
+		margin-left: 200px;
+	}*/
+
+	/*Show all nav*/
+	/*nav.sidebar{
+		margin-left: 0px;
+		float: left;
+	}*/
+	/*Show hidden items on nav*/
+	/*nav.sidebar .forAnimate{
+		opacity: 1;
+	}*/
+
+	/*navbar position fixed*/
+	/*.navbar{
+		position: fixed;
+	}*/
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+	/*color: #f96145;*/
+	color: #0074D9;
+	background-color: transparent;
+}
+
+nav:hover .forAnimate{
+	opacity: 1;
+}
+section{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/*End main dashbpard navbar styles*/
+/*************************************************/
+
+
+/*Took the switch design from http://cssdeck.com/labs/a-simple-css-switch*/
+/*------------------------------------------------*/
+/* Switch SECTION START*/
+/*------------------------------------------------*/
+.Switch {
+position: relative;
+display: inline-block;
+font-size: 1.6em;
+font-weight: bold;
+color: #ccc;
+text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+height: 18px;
+padding: 6px 6px 5px 6px;
+border: 1px solid #ccc;
+border: 1px solid rgba(0,0,0,0.2);
+border-radius: 4px;
+background: #ececec;
+box-shadow: 0px 0px 4px rgba(0,0,0,0.1), inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+/*cursor: pointer;*/
+}
+
+body.IE7 .Switch { width: 78px; }
+
+.Switch span { display: inline-block; width: 35px; }
+.Switch span.On { color: #33d2da; }
+
+.Switch .Toggle {
+position: absolute;
+top: 1px;
+width: 37px;
+height: 25px;
+border: 1px solid #ccc;
+border: 1px solid rgba(0,0,0,0.3);
+border-radius: 4px;
+background: #fff;
+background: -moz-linear-gradient(top,  #ececec 0%, #ffffff 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#ffffff));
+background: -webkit-linear-gradient(top,  #ececec 0%,#ffffff 100%);
+background: -o-linear-gradient(top,  #ececec 0%,#ffffff 100%);
+background: -ms-linear-gradient(top,  #ececec 0%,#ffffff 100%);
+background: linear-gradient(top,  #ececec 0%,#ffffff 100%);
+
+box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.5);
+z-index: 999;
+
+-webkit-transition: all 0.15s ease-in-out;
+-moz-transition: all 0.15s ease-in-out;
+-o-transition: all 0.15s ease-in-out;
+-ms-transition: all 0.15s ease-in-out;
+}
+
+.Switch.On .Toggle { left: 2%; }
+.Switch.Off .Toggle { left: 54%; }
+
+
+/* Round Switch */
+.Switch.Round {
+padding: 0px 14px;
+border-radius: 40px;
+}
+
+body.IE7 .Switch.Round { width: 1px; }
+
+.Switch.Round .Toggle {
+border-radius: 40px;
+width: 15px;
+height: 14px;
+}
+
+.Switch.Round.On .Toggle { left: 8%; background: #28C31F; }
+.Switch.Round.Off .Toggle { left: 43%; }
+/*------------------------------------------------*/
+/* Switch SECTION END*/
+/*------------------------------------------------*/
+
+/*Above swutch has been scrapped, we now use simple glyphicons and colors*/
+
+i.campaign-on{
+	color: green;
+}
+
+i.campaign-off{
+	color:#F10000;
+}
+
+
+
+/*************************************************/
+/*Start main dashbpard data styles*/
+
+.main .campaign{
+	width: 100%;
+}
+
+.client_name_header{
+	border-top: none !important;
+	text-align: left !important;
+	border-bottom: 1px solid black;
+}
+
+.client_name_header h3{
+	margin-top: 2px;
+	margin-bottom: 0px;
+	font-size: 1.5em;
+}
+
+.main .campaign .header{
+	text-align: center;
+	/*color: #f96145;*/
+	color: #2D6F90;
+}
+
+.header{
+	background-color:white;
+	border-top: none !important;
+}
+
+.header i{
+	color:#2D6F96;font-size:14px;width:3%;
+}
+
+.header span{
+	color: #000;
+}
+
+.header h4{
+    /*position: relative;
+	width: 25%;
+    left: 36%;*/
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 4px;
+	margin-bottom: 0px;
+	font-size: 1.2em;
+}
+
+.study_spacer{
+	border: none;
+	height: 15px;
+	background-color: white;
+}
+
+.client_spacer{
+	border: none;
+	height: 30px;
+	background-color: white;
+}
+
+.main .campaign .table td, .main .campaign .table th, .modal .table td, .modal .table th {
+   text-align: center;
+   font-size: 0.9em;
+}
+
+.main .campaign .table{
+	width: 100%;
+}
+
+.table tr{
+	height: 0px;
+}
+
+/*study medium*/
+.main .campaign .table td:nth-child(1), .main .campaign .table th:nth-child(1){
+	font-weight: bolder;
+	width:1%;
+}
+/*campaign name*/
+.main .campaign .table td:nth-child(2), .main .campaign .table th:nth-child(2){
+	width:1%;
+	text-align: left;
+}
+/*end date*/
+.main .campaign .table td:nth-child(3), .main .campaign .table th:nth-child(3){
+	width:1%;
+}
+/*on/off*/
+.main .campaign .table td:nth-child(4), .main .campaign .table th:nth-child(4){
+	width:1%;
+}
+/*budget*/
+.main .campaign .table td:nth-child(5), .main .campaign .table th:nth-child(5){
+	width:1%;
+}
+/*remaining budget*/
+.main .campaign .table td:nth-child(6), .main .campaign .table th:nth-child(6){
+	width:1%;
+}
+/*spent*/
+.main .campaign .table td:nth-child(7), .main .campaign .table th:nth-child(7){
+	width:1%;
+}
+/*conversions*/
+.main .campaign .table td:nth-child(8), .main .campaign .table th:nth-child(8){
+	width:1%;
+}
+/*CPA*/
+.main .campaign .table td:nth-child(9), .main .campaign .table th:nth-child(9){
+	width:1%;
+}
+/*CTR*/
+.main .campaign .table td:nth-child(10), .main .campaign .table th:nth-child(10){
+	width:1%;
+}
+/*Clicks*/
+.main .campaign .table td:nth-child(11), .main .campaign .table th:nth-child(11){
+	width:1%;
+}
+/*Impressions*/
+.main .campaign .table td:nth-child(12), .main .campaign .table th:nth-child(12){
+	width:1%;
+}
+/*Total Conversions*/
+.main .campaign .table td:nth-child(13), .main .campaign .table th:nth-child(13){
+	width:1%;
+}
+/*Average CPR*/
+.main .campaign .table td:nth-child(14), .main .campaign .table th:nth-child(14){
+	width:1%;
+}
+/*Average CTR*/
+.main .campaign .table td:nth-child(15), .main .campaign .table th:nth-child(15){
+	width:1%;
+}
+
+
+.yesterday_values{
+	/*display: block;*/
+	color:gray;
+	font-size: 11px;
+}
+
+.arrow_rotated_up{
+	-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.arrow_rotated_down{
+	-webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.green_arrow{
+	color: green;
+}
+.red_arrow{
+	color: red;
+}
+.red_color{
+	color: red;
+	font-weight: bold;
+}
+
+.date_time{
+	/*float:right;*/
+	font-size:14px;
+	text-align: right;
+}
+
+.date_range_picker{
+	/*float: left;
+	margin-left: 24px;*/
+	font-size: 20px;
+	cursor: pointer;
+}
+.date_range_picker span{
+	font-size: 14px;
+}
+
+.date_range_picker:hover{
+	color: #0074D9;
+}
+
+.notification{
+	height: 15px;
+	width: 15px;
+	border-radius: 15px;
+	margin: auto;
+}
+
+.help-block{
+	text-align: center;
+	margin: 0px;
+}
+
+.info{
+	background-color: #337ab7;;
+	-moz-box-shadow: 0 0 5px #00A5D6;
+	-webkit-box-shadow: 0 0 5px #00A5D6;
+	box-shadow: 0px 0px 15px #00A5D6;
+}
+
+.normal{
+	background-color: #00B100;
+	-moz-box-shadow: 0 0 5px ##00DC00;
+	-webkit-box-shadow: 0 0 5px ##00DC00;
+	box-shadow: 0px 0px 15px #00DC00;
+}
+
+.urgent{
+	background-color: #D20909;
+	-moz-box-shadow: 0 0 5px #FF0700;
+	-webkit-box-shadow: 0 0 5px #FF0700;
+	box-shadow: 0px 0px 15px #FF0700;
+}
+
+.warning{
+	background-color: #FEFF6A;
+	-moz-box-shadow: 0 0 5px #FEFF6A;
+	-webkit-box-shadow: 0 0 5px #FEFF6A;
+	box-shadow: 0px 0px 15px #A70000;
+}
+
+/*Any new notification color can be added by copying the above templates and changing the colors*/
+
+.campaign-info{
+	color: gray;
+	cursor: pointer;
+}
+.campaign-info:hover{
+	/*color: #f96145;*/
+	color: #0074D9;
+}
+
+
+/*End main dashbpard data styles*/
+/*************************************************/
+
+/*Adding styles for header that scrolls then fixes*/
+
+.header_fixed{
+	position: fixed;
+	top:0px;
+	/*width: 100%;*/
+	/*height: */
+	background-color: gray;
+}
+
+table tbody, table thead
+{
+    /*display: block;*/
+}
+
+/*table tbody 
+{
+   overflow: auto;
+   max-height: 1000px;
+}*/
+
+#table_header{
+
+}
+
+.make_fixed{
+	position: fixed;
+	top:0px;
+	background-color: white;
+	z-index: 99999;
+}
+
+.fixed_thead_th{
+	/*width:100px;*/
+	height: 50px;
+	border-bottom: none;
+	float:left;
+	/*padding: 5px;*/
+	vertical-align: center;
+	margin-top: 10px;
+}
